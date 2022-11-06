@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxKKTU1Kvnz.woff2) format('woff2');
+}
+
+/* restoring all the default 
+   properties of the browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* all similar effects of the web page 
+   so we applied them to the body */
+/* body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+body {
+    background-color: #d1d1d1;
+    color: #f5f5f5;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10em;
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    display: grid;
+    grid-gap: 0;
+    width: 90vh;
+    height: 90vh;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    background-color: #a79cef;
+    border: 2px solid #524b77;
+}
+
+.grid-item {
+    border: solid #483c3c 1px;
+}
+
+.hovered {
+    background-color: #524b77;
+    border-color: #b2a6f0;
+}
+
+button {
+    height: 3em;
+    width: 7em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    background-color: #f5f5f5;
+    color: #222222;
+    border-radius: 1em;
+    border-color: none;
+}
+
+button:hover {
+    background-color: #777777;
+    color: #f5f5f5;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #b2a6f0;
+    color: white;
+}
+
+#buttons {
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20%;
+    background-color: #524b77;
+    padding: 1em;
+}
+
+
+.add-gridlines {
+    border: 0.5px solid rgba(21, 6, 88, 0.7);
+}
+
+#display-gridlines {
+    padding: 0 20px;
+}
+
+/* css effects for the color picker */
+input {
+    margin: 2em;
+    width: 3em;
+    height: 3em;
+    border-radius: 20%;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 .5em rgb(108, 103, 103);
+}
+
+/* for the icon that we have added */
+.fas {
+    margin: 1em;
+}
+
+/* hover effects on color picker */
+input:hover {
+    animation: round 2s infinite;
+}
+
+/* animation for our color picker */
+@keyframes round {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(60deg);
+    }
+
+    20% {
+        transform: rotate(120deg);
+    }
+
+    40% {
+        transform: rotate(180deg);
+    }
+
+    60% {
+        transform: rotate(240deg);
+    }
+
+    80% {
+        transform: rotate(300deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
